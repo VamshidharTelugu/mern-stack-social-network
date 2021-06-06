@@ -45,9 +45,7 @@ router.post(
 
       await user.save();
 
-      const payload = {
-        id: user.id,
-      };
+      const payload = { user: { id: user.id } };
 
       jwt.sign(
         payload,
